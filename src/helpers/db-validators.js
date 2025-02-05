@@ -29,4 +29,13 @@ export const petExists = async (id = "") => {
     }
 };
 
+export const AppointmentExists = async (id = "") => {
+    const existe = await Appointment.findById(id);
+    if (!existe) {
+        throw new Error("No existe la cita con el ID proporcionado");
+    }
+};
+
+
+
 
