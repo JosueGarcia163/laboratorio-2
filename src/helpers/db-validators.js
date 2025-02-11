@@ -1,5 +1,6 @@
 import User from "../user/user.model.js"
 import Pet from "../pet/pet.model.js"
+import appointmentModel from "../appointment/appointment.model.js"
 
 export const emailExists = async (email = "") => {
     const existe = await User.findOne({email})
@@ -30,7 +31,7 @@ export const petExists = async (id = "") => {
 };
 
 export const AppointmentExists = async (id = "") => {
-    const existe = await Appointment.findById(id);
+    const existe = await appointmentModel.findById(id);
     if (!existe) {
         throw new Error("No existe la cita con el ID proporcionado");
     }

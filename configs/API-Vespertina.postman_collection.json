@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "27eb8f28-1fb5-4819-b153-f2f2bb0b9965",
+		"name": "API-Vespertina",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37585552"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Josue",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Garcia",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "username1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "username1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "52486947",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678ASddadaw$%",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "USER_ROLE",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/david/OneDrive/Pictures/Screenshots/Screenshot 2025-01-31 210709.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"username1@gmail.com\",\r\n    \"username\": \"username1\",\r\n    \"password\": \"12345678ASddadaw$%\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Buscar un usuario por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/user/findUser/67aaac54ffeffcd0fed35da3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"user",
+								"findUser",
+								"67aaac54ffeffcd0fed35da3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar ususario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/user/deleteUser/67aaac54ffeffcd0fed35da3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"user",
+								"deleteUser",
+								"67aaac54ffeffcd0fed35da3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar contraseña",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\":\"12345678AADS$asdfasf%\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/user/updatePassword/67aaac54ffeffcd0fed35da3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"user",
+								"updatePassword",
+								"67aaac54ffeffcd0fed35da3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"NuevoNombres\",\r\n    \"surname\": \"mendezs\",\r\n    \"username\": \"nuevoUsernames\",\r\n    \"email\": \"nuevoss@gmail.com\",\r\n    \"phone\": \"58496741\",\r\n    \"role\": \"USER_ROLE\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/user/updateUser/67aaac54ffeffcd0fed35da3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"user",
+								"updateUser",
+								"67aaac54ffeffcd0fed35da3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pets",
+			"item": [
+				{
+					"name": "Buscar mascota por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/pet/findPet/67aab23492071d328b4a23d4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"pet",
+								"findPet",
+								"67aab23492071d328b4a23d4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar mascota",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/pet/deletePet/67aab23492071d328b4a23d4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"pet",
+								"deletePet",
+								"67aab23492071d328b4a23d4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar mascotas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/pet/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"pet",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar mascota",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"conejo\",\r\n    \"description\": \"grande\",\r\n    \"age\": \"5\",\r\n    \"type\": \"pastor aleman\",\r\n    \"keeper\": \"67aaaa6f3632d4e527639521\",\r\n    \"email\": \"username1@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/pet/addPet",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"pet",
+								"addPet"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointment",
+			"item": [
+				{
+					"name": "Agregar una cita",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2025-02-06T06:28:33.615Z\",\r\n    \"pet\": \"67aab1d792071d328b4a23d1\",\r\n    \"user\": \"67aaaa6f3632d4e527639521\"\r\n\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/appointment/createAppointment",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"appointment",
+								"createAppointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarCitas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/appointment/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"appointment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editarCitas",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2025-02-09T10:00:00.000Z\",\r\n    \"status\": \"COMPLETED\",\r\n    \"pet\": \"67aab23492071d328b4a23d4\",\r\n    \"user\": \"67aaac54ffeffcd0fed35da3\"\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/appointment/updateAppointment/67aab47d92071d328b4a23ef",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"appointment",
+								"updateAppointment",
+								"67aab47d92071d328b4a23ef"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelarCita",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/appointment/cancelAppointment/67aab47d92071d328b4a23ef",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"appointment",
+								"cancelAppointment",
+								"67aab47d92071d328b4a23ef"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

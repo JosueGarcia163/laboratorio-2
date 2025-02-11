@@ -118,9 +118,25 @@ Las siguientes funcionalidades necesitan ser desarrolladas:
 
 2. **Listar Citas**
    - Descripción: Implementar funcionalidad para listar todas las citas de un usuario.
+    - **URL:** `api/appointment/`
+    - **Método:** `GET`
 
 3. **Actualizar Cita**
    - Descripción: Implementar funcionalidad para actualizar una cita existente.
+    - **URL:** `/api/appointment/updateAppointment/:id`
+    - **Método:** `UPDATE`
+     ```json
+   {
+      "date": "2025-02-09T10:00:00.000Z",
+      "status": "COMPLETED",
+      "pet": "67aab23492071d328b4a23d4",
+      "user": "67aaac54ffeffcd0fed35da3" 
+    }
+    ```
 
 4. **Cancelar Cita**
    - Descripción: Implementar funcionalidad para cancelar una cita existente.
+      - **URL:** `/api/appointment/cancelAppointment/:id`
+      - **Método:** `PATCH`
+
+

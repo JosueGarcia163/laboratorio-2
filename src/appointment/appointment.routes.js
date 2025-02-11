@@ -12,7 +12,7 @@ router.get("/", getAppointment)
 //Metodo http para actualizar cita.
 router.put("/updateAppointment/:id", updateAppointmentValidator, updateAppointment);
 
-router.delete("/cancelAppointment/:id", cancelAppointmentValidator, cancelAppointment)
+router.patch("/cancelAppointment/:id", cancelAppointmentValidator, cancelAppointment)
 
 export default router;
 
