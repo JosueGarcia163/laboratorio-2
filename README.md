@@ -117,6 +117,7 @@ Las siguientes funcionalidades necesitan ser desarrolladas:
    - Descripción: Implementar funcionalidad para actualizar la foto de perfil del usuario.
       - **URL:** `/api/user/updateProfilePicture/:id`
       - **Método:** `PATCH`
+        
       profilePicture: (archivo.jpg)
       Tipo: File
 
