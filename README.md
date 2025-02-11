@@ -115,6 +115,11 @@ Las siguientes funcionalidades necesitan ser desarrolladas:
 
 1. **Actualizar Foto del Usuario**
    - Descripción: Implementar funcionalidad para actualizar la foto de perfil del usuario.
+      - **URL:** `/api/user/updateProfilePicture/:id`
+      - **Método:** `PATCH`
+      profilePicture: (archivo.jpg)
+      Tipo: File
+
 
 2. **Listar Citas**
    - Descripción: Implementar funcionalidad para listar todas las citas de un usuario.
@@ -129,8 +134,8 @@ Las siguientes funcionalidades necesitan ser desarrolladas:
    {
       "date": "2025-02-09T10:00:00.000Z",
       "status": "COMPLETED",
-      "pet": "67aab23492071d328b4a23d4",
-      "user": "67aaac54ffeffcd0fed35da3" 
+      "pet": "<pet_id>",
+      "user": "<user_id>" 
     }
     ```
 

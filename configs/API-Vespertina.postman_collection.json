@@ -273,6 +273,45 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Actualizar foto",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/david/OneDrive/Pictures/Screenshots/Screenshot 2025-02-07 201943.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/user/updateProfilePicture/67aac53de2d79cfe0694816c",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"user",
+								"updateProfilePicture",
+								"67aac53de2d79cfe0694816c"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -363,7 +402,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"conejo\",\r\n    \"description\": \"grande\",\r\n    \"age\": \"5\",\r\n    \"type\": \"pastor aleman\",\r\n    \"keeper\": \"67aaaa6f3632d4e527639521\",\r\n    \"email\": \"username1@gmail.com\"\r\n\r\n}",
+							"raw": "{\r\n    \"name\":\"conejo\",\r\n    \"description\": \"grande\",\r\n    \"age\": \"5\",\r\n    \"type\": \"pastor aleman\",\r\n    \"keeper\": \"67aac46de2d79cfe0694814f\",\r\n    \"email\": \"username1@gmail.com\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -402,7 +441,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"date\": \"2025-02-06T06:28:33.615Z\",\r\n    \"pet\": \"67aab1d792071d328b4a23d1\",\r\n    \"user\": \"67aaaa6f3632d4e527639521\"\r\n\r\n\r\n\r\n}",
+							"raw": "{\r\n    \"date\": \"2025-02-06T06:28:33.615Z\",\r\n    \"pet\": \"67aac498e2d79cfe06948156\",\r\n    \"user\": \"67aac46de2d79cfe0694814f\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -464,7 +503,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"date\": \"2025-02-09T10:00:00.000Z\",\r\n    \"status\": \"COMPLETED\",\r\n    \"pet\": \"67aab23492071d328b4a23d4\",\r\n    \"user\": \"67aaac54ffeffcd0fed35da3\"\r\n   \r\n}",
+							"raw": "{\r\n    \"date\": \"2025-02-09T10:00:00.000Z\",\r\n    \"status\": \"COMPLETED\",\r\n    \"pet\": \"67aac498e2d79cfe06948156\",\r\n    \"user\": \"67aac53de2d79cfe0694816c\"\r\n   \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -472,7 +511,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/appointment/updateAppointment/67aab47d92071d328b4a23ef",
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/appointment/updateAppointment/67aac4c1e2d79cfe0694815f",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -486,7 +525,7 @@
 								"v1",
 								"appointment",
 								"updateAppointment",
-								"67aab47d92071d328b4a23ef"
+								"67aac4c1e2d79cfe0694815f"
 							]
 						}
 					},
@@ -501,7 +540,7 @@
 						"method": "PATCH",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/appointment/cancelAppointment/67aab47d92071d328b4a23ef",
+							"raw": "http://127.0.0.1:3001/adoptionSystem/v1/appointment/cancelAppointment/67aac4c1e2d79cfe0694815f",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -515,7 +554,7 @@
 								"v1",
 								"appointment",
 								"cancelAppointment",
-								"67aab47d92071d328b4a23ef"
+								"67aac4c1e2d79cfe0694815f"
 							]
 						}
 					},
